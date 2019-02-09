@@ -1,3 +1,19 @@
+body {
+  font-family: 'Geometria', sans-serif;
+}
+.visuallyhidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 @font-face {
   font-family: 'Geometria';
   src: url('../fonts/Geometria-Bold.woff') format('woff'), url('../fonts/Geometria-Bold.woff2') format('woff2');
@@ -108,4 +124,7 @@
   src: url('../fonts/Philosopher-Regular.woff') format('woff'), url('../fonts/Philosopher-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: italic;
+}
+.main-nav__logo {
+  font-family: 'Philosopher';
 }
