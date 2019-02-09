@@ -1,0 +1,45 @@
+
+.decoration-circle__inner {
+    height: 60px;
+    margin: 0 auto;
+    width: 109px;
+    overflow: hidden;
+
+    & svg {
+        width: 109px;
+    }
+}
+
+.decoration-circle {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0);
+}
+
+.decoration-transparent {
+    font-size: 60px;
+    color: transparent;
+    -webkit-text-stroke: 1px #000;
+    font-weight: 500;
+}
+
+.decoration-transparent__letter {
+    position: absolute;
+    
+
+    &--a {
+        top: 110px;
+        left: 75px;
+        z-index: 2;
+    }
+    &--g {
+        top: 80px;
+        left: 50%;
+        z-index: -1;
+    }
+    &--e {
+        top: 50px;
+        right: 52px;
+    }
+}

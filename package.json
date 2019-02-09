@@ -29,5 +29,7 @@
   "engines": {
     "node": "11.9.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
 }

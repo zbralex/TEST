@@ -1,5 +1,11 @@
 body {
+    min-width: 320px;
     font-family: 'Geometria', sans-serif;
+    color: @color;
+    background-color: #F7E611;
+}
+.hidden {
+    display: none;
 }
 .visuallyhidden:not(:focus):not(:active) {
     position: absolute;
@@ -15,4 +21,19 @@ body {
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
+  }
+
+  .back {
+    z-index: -2;
+    left: -13%;
+    width: 280px;
+  }
+
+  .forward {
+    z-index: -1;
+    width: 560px;
+    object-fit: cover;
+    height: 320px;
+    bottom: 0;
+    transform: translate(-20%, 0);
   }
