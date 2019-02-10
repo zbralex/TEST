@@ -12,31 +12,34 @@
 
     position: absolute;
     top: 151px;
-    left: -6%;
+    left: -20px;
     transform: rotate(-90deg);
 }
-
+.banner__carousel-wrap {
+    max-width: 594px;
+    margin: 0 auto;
+}
 .banner__carousel-wrap::after {
     content: "";
     display: block;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='177' height='282' viewBox='0 0 177 282'%3E%3Cmetadata%3E%3C%3Fxpacket begin='﻿' id='W5M0MpCehiHzreSzNTczkc9d'%3F%3E%3Cx:xmpmeta xmlns:x='adobe:ns:meta/' x:xmptk='Adobe XMP Core 5.6-c140 79.160451, 2017/05/06-01:08:21 '%3E%3Crdf:RDF xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns%23'%3E%3Crdf:Description rdf:about=''/%3E%3C/rdf:RDF%3E%3C/x:xmpmeta%3E%3C%3Fxpacket end='w'%3F%3E%3C/metadata%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; stroke: %23000005; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1px; fill-rule: evenodd; %7D %3C/style%3E%3C/defs%3E%3Cpath id='Прямоугольник_1' data-name='Прямоугольник 1' class='cls-1' d='M349.5,266.5H525.5l-38.2,281H349.5v-281Z' transform='translate(-349 -266)'/%3E%3C/svg%3E%0A");
     width: 190px;
 
-height: 155px;
-position: absolute;
-right: -17px;
-top: -105px;
-background-size: 100%;
-background-repeat: no-repeat;
-background-position: -10px -150px;
-transform: rotate(90deg);
-z-index: -3;
+    height: 155px;
+    position: absolute;
+    right: -17px;
+    top: -105px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: -10px -150px;
+    transform: rotate(90deg);
+    z-index: -3;
 }
 
 
 .banner__carousel {
     //background-color: fade(@bg-color, 60%);
-    width: 320px;
+    width: 100%;
     height: 488px;
     object-fit: cover;
     overflow: hidden;
@@ -51,13 +54,13 @@ z-index: -3;
     &::after {
         z-index: -2;
         top: 0;
-        width: 235px;
+        width: 74%;
         height: 100%;
         background-color: fade(@bg-color, 80%);
     }
     &::before {
         height: 320px;
-        width: 320px;
+        width: 100%;
         z-index: 0;
         top: 168px;
 
@@ -75,9 +78,12 @@ z-index: -3;
 
     
     width: 100%;
+    max-width: 320px;
 
     position: absolute;
     bottom: 128px;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
 .banner__carousel-btn {
@@ -102,4 +108,136 @@ z-index: -3;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='36' viewBox='0 0 20 36'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B opacity: 0.4; %7D %3C/style%3E%3C/defs%3E%3Cpath id='Shape_20114_20copy_203' data-name='Shape%2520114%2520copy%25203' class='cls-1' d='M20,18.084,2.794,36,0,33.07,14.473,18,0,2.93,2.794,0,20,17.917,19.92,18Z'/%3E%3C/svg%3E%0A");
     }
 }
+@media (min-width: 590px) {
+    .banner__company-slogan  {
+        left: 10%;
+    }
+}
+@media (min-width: 768px) {
+    .banner {
+        background-color: #f7e611;
+        z-index: 0;
+        margin-top: -25px;
+    }
+    .banner__company-slogan  {
+        left: 15%;
+    }
 
+    .banner__carousel::before {
+        width: 74%;
+    }
+}
+@media (min-width: 1440px) {
+
+    .banner {
+        max-width: 1440px;
+        margin: 0 auto;
+        background: none;
+    }
+    .banner__company-title {
+        font-family: 'Philosopher';
+        font-size: 140px;
+        text-transform: uppercase;
+        letter-spacing: 51px;
+        font-weight: 400;
+        position: absolute;
+        top: 135px;
+        left: 51.8%;
+        transform: translate(-50%, 0);
+        z-index: 1;
+        color: #fff;
+    }
+    .banner__carousel-wrap {
+        max-width: inherit;
+        position: relative;
+
+        &::after {
+            width: 177px;
+            position: absolute;
+            right: 914px;
+            top: unset;
+            bottom: 152px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: unset;
+            z-index: 0;
+            height: 282px;
+        }
+    }
+    .banner__carousel {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 1280px;
+        height: 610px;
+    }
+
+    .banner__carousel-buttons {
+        max-width: 254px;
+        right: 15.2%;
+        transform: unset;
+        left: unset;
+        bottom: 168px;
+    }
+    .banner__carousel::before {
+        height: 491px;
+        right: 0;
+        top: 95px;
+        width: 860px;
+        background-color: fade(@bg-color, 80%);
+    }
+    .banner__carousel::after {
+        width: 800px;
+        top: 7px;
+        left: 0;
+        height: 86.1%;
+    }
+    .banner__company-slogan {
+        left: 19.5%;
+        top: unset;
+        bottom: 33%;
+    }
+    .banner-symbols {
+        position: absolute;
+        top: 0;
+    }
+    .banner-sybmol__1, .banner-sybmol__3 {
+        font-size: 14px;
+        font-weight: 400;
+        position: absolute;
+        left: 222px;
+    }
+    .banner-sybmol__1 {
+        top: 92px;
+    }
+    .banner-sybmol__3 {
+        top: 172px;
+    }
+    .banner-sybmol__51 {
+        font-size: 28.01px;
+        font-weight: 900;
+        transform: rotate(-90deg);
+        position: absolute;
+        top: 38px;
+        left: 563px;
+        letter-spacing: 1px;
+    }
+    .banner-sybmol__ural {
+        font-size: 17px;
+        font-weight: 300;
+        line-height: 20.91px;
+        color: #fff;
+        text-transform: uppercase;
+        display: block;
+        height: 100px;
+        width: 100px;
+        padding: 30px 23px;
+        border: 1px solid #000;
+        border-radius: 50%;
+        box-sizing: border-box;
+        position: absolute;
+        left: 586px;
+        letter-spacing: 2px;
+        top: 126px;
+    }
+}

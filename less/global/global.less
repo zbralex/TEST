@@ -3,8 +3,14 @@ body {
     font-family: 'Geometria', sans-serif;
     color: @color;
     background-color: #F7E611;
+    z-index: 0;
+    position: relative;
 }
-.hidden {
+main {
+  margin: 0 auto;
+  width: 100%;
+}
+.hidden, .invisible {
     display: none;
 }
 .visuallyhidden:not(:focus):not(:active) {
@@ -26,8 +32,8 @@ body {
   .back {
     z-index: -2;
     left: -14%;
-    width: 280px;
-    height: 184.11px;
+    width: 88%;
+    height: auto;
   }
 
   .forward {
@@ -38,9 +44,31 @@ body {
     bottom: 0;
     transform: translate(-21.5%, 0);
   }
-
+@media (min-width: 768px) {
+  body {
+    background-color: #fff;
+  }
+}
   @media (min-width: 1440px) {
+    
+    main {
+      width: 100%;
+      max-width: 1440px;
+    }
     .hidden {
       display: block;
+    }
+
+    .forward {
+      width: 860px;
+      height: 490px;
+      left: 47.3%;
+      bottom: 4%
+    }
+    .back {
+      width: 800px;
+      height: 525px;
+      left: 0;
+      top: 7px;
     }
   }
