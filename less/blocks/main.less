@@ -1,0 +1,71 @@
+.main-nav, .main-nav__logo {
+    height: 54px;
+}
+
+.main-nav__logo {
+    font-family: 'Philosopher';
+    font-size: 32px;
+    color: @color;
+    text-decoration: none;
+
+    height: 34px;
+    width: 20px;
+    padding: 5px;
+    margin: 20px 15px;
+}
+
+.main-nav {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center
+}
+.main-nav__nav-button {
+    font-size: 0;
+    background: none;
+    border: none;
+    
+    height: 20px;
+    width: 20px;
+    padding: 5px;
+    margin: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='14' viewBox='0 0 20 14'%3E%3Cg id='Group_4' data-name='Group 4' transform='translate(-1379 -42)'%3E%3Crect id='Rectangle_8' data-name='Rectangle 8' width='20' height='2' transform='translate(1379 42)'/%3E%3Crect id='Rectangle_9' data-name='Rectangle 9' width='20' height='2' transform='translate(1379 48)'/%3E%3Crect id='Rectangle_10' data-name='Rectangle 10' width='20' height='2' transform='translate(1379 54)'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.main-digit  {
+    
+    font-weight: 900;
+    font-style: italic;
+    position: absolute;
+    right: 0px;
+    bottom: 0;
+    overflow: hidden;
+    width: 140px;
+    height: 140px;
+
+    &__year {
+        z-index: 1;
+        left: 99px;
+        top: 100px;
+        font-size: 20px;
+    }
+    &::after {
+        content: "";
+        display: block;
+        width: 148px;
+        height: 148px;
+        position: absolute;
+        bottom: -74px;
+        left: 66px;
+        background-color: #F7E611;
+        transform: rotate(45deg);
+        z-index: 0;
+        overflow: hidden;
+    
+    }
+    
+}
